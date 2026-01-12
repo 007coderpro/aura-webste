@@ -26,6 +26,9 @@ export default function Footer() {
             <Link href="/pages/contact" className="text-gray-400 hover:text-white text-sm">
               Contact Us
             </Link>
+            <Link href="/pages/delete-account" className="text-gray-400 hover:text-white text-sm">
+              Delete Account
+            </Link>
           </div>
         </div>
         <div className="mt-8 border-t border-white/5 pt-8 text-center">

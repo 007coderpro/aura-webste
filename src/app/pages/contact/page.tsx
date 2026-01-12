@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -118,6 +119,11 @@ export default function ContactPage() {
                 Failed to send message. Please try again later or email us directly.
               </p>
             )}
+            <div className="mt-8 text-center">
+              <Link href="/pages/delete-account" className="text-sm text-gray-400 hover:text-white transition-colors underline decoration-gray-600 underline-offset-4">
+                Want to delete totally everything?
+              </Link>
+            </div>
           </div>
         </form>
       </div>
