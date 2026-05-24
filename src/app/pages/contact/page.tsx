@@ -111,7 +111,7 @@ export default function ContactPage() {
             </button>
             {status === 'success' && (
               <p className="mt-4 text-center text-sm text-green-400">
-                Message sent successfully! We'll get back to you soon.
+                Message sent successfully! We&apos;ll get back to you soon.
               </p>
             )}
             {status === 'error' && (

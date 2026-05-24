@@ -28,6 +28,9 @@ export default function Navbar() {
               <Link href="/" className="border-transparent text-gray-300 hover:border-blue-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                 Home
               </Link>
+              <Link href="/blog" className="border-transparent text-gray-300 hover:border-blue-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                Blog
+              </Link>
               <Link href="/pages/contact" className="border-transparent text-gray-300 hover:border-blue-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                 Contact
               </Link>
@@ -35,11 +38,10 @@ export default function Navbar() {
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <Link 
-              href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131" 
-              target="_blank"
+              href="/#download-platforms"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 transition-colors"
             >
-              Get Aura VPN
+              Download Aura VPN
             </Link>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
@@ -60,15 +62,17 @@ export default function Navbar() {
             <Link href="/" className="bg-white/10 border-blue-500 text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
               Home
             </Link>
+            <Link href="/blog" className="border-transparent text-gray-300 hover:bg-white/5 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+              Blog
+            </Link>
             <Link href="/pages/contact" className="border-transparent text-gray-300 hover:bg-white/5 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
               Contact
             </Link>
             <Link 
-              href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131"
-              target="_blank"
+              href="/#download-platforms"
               className="border-transparent text-blue-400 hover:bg-white/5 hover:border-blue-400 hover:text-blue-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
             >
-              Get Aura VPN
+              Download Aura VPN
             </Link>
           </div>
         </div>

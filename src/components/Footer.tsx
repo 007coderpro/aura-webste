@@ -1,7 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { shouldShowFooterLogin } from "@/lib/routes";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const showLogin = shouldShowFooterLogin(pathname);
+
   return (
     <footer className="bg-transparent border-t border-white/5 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -16,7 +23,7 @@ export default function Footer() {
             />
             <span className="font-bold text-lg text-[#ffbd1c]">Aura VPN</span>
           </div>
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
             <Link href="/pages/terms" className="text-gray-400 hover:text-white text-sm">
               Terms of Service
             </Link>
@@ -29,6 +36,11 @@ export default function Footer() {
             <Link href="/pages/delete-account" className="text-gray-400 hover:text-white text-sm">
               Delete Account
             </Link>
+            {showLogin && (
+              <Link href="/admin/blogs" className="text-gray-400 hover:text-white text-sm">
+                Login
+              </Link>
+            )}
           </div>
         </div>
         <div className="mt-8 border-t border-white/5 pt-8 text-center">

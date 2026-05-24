@@ -1,0 +1,37 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Aura VPN Logo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Aura VPN Logo" [ref=e8]
+        - generic [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "Blog" [ref=e11] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e12] [cursor=pointer]:
+            - /url: /pages/contact
+      - link "Download Aura VPN" [ref=e14] [cursor=pointer]:
+        - /url: /#download-platforms
+  - main [ref=e15]:
+    - generic [ref=e17]: Loading admin session...
+  - contentinfo [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - img "Aura VPN Logo" [ref=e22]
+          - generic [ref=e23]: Aura VPN
+        - generic [ref=e24]:
+          - link "Terms of Service" [ref=e25] [cursor=pointer]:
+            - /url: /pages/terms
+          - link "Privacy Policy" [ref=e26] [cursor=pointer]:
+            - /url: /pages/privacy
+          - link "Contact Us" [ref=e27] [cursor=pointer]:
+            - /url: /pages/contact
+          - link "Delete Account" [ref=e28] [cursor=pointer]:
+            - /url: /pages/delete-account
+      - paragraph [ref=e30]: © 2026 Aura VPN. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e36] [cursor=pointer]:
+    - img [ref=e37]
+  - alert [ref=e40]

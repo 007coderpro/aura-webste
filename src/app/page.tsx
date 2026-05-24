@@ -1,13 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Shield, Zap, Globe, Lock, MousePointerClick, Headphones, Smartphone } from "lucide-react";
+import { Download, Globe, Lock, MousePointerClick, Shield, Smartphone, Zap } from "lucide-react";
+
+const platformDownloads = [
+  {
+    name: "macOS",
+    category: "Official Store",
+    href: "https://apps.apple.com/fi/app/aura-vpn-fast-unlimited/id6745866131",
+    description: "Download Aura VPN for macOS from the App Store for automatic updates and a trusted install flow.",
+    cta: "Open App Store",
+    badge: "Desktop",
+    isDirectDownload: false,
+  },
+  {
+    name: "iPhone & iPad",
+    category: "Official Store",
+    href: "https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131",
+    description: "Download Aura VPN for iOS from the App Store for automatic updates and trusted install flow.",
+    cta: "Open App Store",
+    badge: "Mobile",
+    isDirectDownload: false,
+  },
+  {
+    name: "Android",
+    category: "Official Store",
+    href: "https://play.google.com/store/apps/details?id=com.auravpn",
+    description: "Install Aura VPN from Google Play on Android phones and tablets.",
+    cta: "Open Google Play",
+    badge: "Mobile",
+    isDirectDownload: false,
+  },
+] as const;
 
 export default function Home() {
   return (
     <div className="bg-transparent">
       {/* Hero Section */}
       <div className="relative isolate px-6 pt-10 lg:px-8">
-        <div className="mx-auto max-w-2xl py-12 sm:py-16 lg:py-20 text-center">
+        <div className="mx-auto max-w-5xl py-12 sm:py-16 lg:py-20 text-center">
           <div className="mb-8 flex justify-center">
             <Image
               src="/transparentLogo.png"
@@ -18,36 +48,44 @@ export default function Home() {
               priority
             />
           </div>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Secure your digital life with <span className="text-[#ffbd1c]">Aura VPN</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300">
             Fast, private, and secure access to the internet. Protect your personal data and browse anonymously from anywhere in the world.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131"
-              target="_blank"
-              className="rounded-lg bg-white/10 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-white/20 ring-1 ring-white/20 flex items-center gap-3 transition-all"
-            >
-              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.21-.82 3.8-.82.4 0 .88.1 1.33.26a5.48 5.48 0 011.69 1.11c-.34.33-2.15 1.76-2.11 4.75.02 2.7 2.37 3.73 2.5 3.8-.11.45-.63 1.94-1.35 2.98-.62.88-1.28 1.76-2.03 1.76-.74 0-1.66-.46-2.92-.46zM13.03 5.37c.7-1.18 1.4-2.29 2.91-2.37.16 1.48-.48 2.66-1.12 3.56-1.13 1.2-2.73 1.15-3.05 1.15-.17-1.41.69-2.6 1.26-2.34z"/></svg>
-              <div className="flex flex-col items-start text-left leading-none">
-                <span className="text-[10px] uppercase opacity-80">Download on the</span>
-                <span className="text-base font-bold">App Store</span>
-              </div>
-            </Link>
-            
-            <Link
-              href="https://play.google.com/store/apps/details?id=com.auravpn"
-              target="_blank"
-              className="rounded-lg bg-white/10 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-white/20 ring-1 ring-white/20 flex items-center gap-3 transition-all"
-            >
-              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"><path d="M22.01 10.97l-15-8.58A1.99 1.99 0 0 0 4 4.02v15.96a1.99 1.99 0 0 0 3.01 1.63l15-8.58c.95-.55.95-2.06 0-2.06zM7.11 17.56V6.44l9.73 5.56-9.73 5.56z"/></svg>
-              <div className="flex flex-col items-start text-left leading-none">
-                <span className="text-[10px] uppercase opacity-80">Get it on</span>
-                <span className="text-base font-bold">Google Play</span>
-              </div>
-            </Link>
+          <p className="mx-auto mt-8 max-w-3xl text-sm text-gray-400">
+            Install Aura VPN from the official stores on macOS, iOS, and Android.
+          </p>
+          <div
+            id="download-platforms"
+            className="mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-4 text-left sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {platformDownloads.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.href}
+                target={platform.isDirectDownload ? undefined : "_blank"}
+                rel={platform.isDirectDownload ? undefined : "noreferrer"}
+                download={platform.isDirectDownload}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/10 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-blue-400/60 hover:bg-white/10"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-[11px] uppercase tracking-[0.24em] text-gray-400">{platform.category}</p>
+                    <h3 className="mt-2 text-2xl font-semibold text-white">{platform.name}</h3>
+                  </div>
+                  <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-blue-100">
+                    {platform.badge}
+                  </span>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-gray-300">{platform.description}</p>
+                <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ffbd1c] transition-transform group-hover:translate-x-1">
+                  <Download className="h-4 w-4" aria-hidden="true" />
+                  <span>{platform.cta}</span>
+                </div>
+              </a>
+            ))}
           </div>
           <div className="mt-8">
             <Link href="/pages/contact" className="text-sm font-semibold leading-6 text-gray-400 hover:text-white transition-colors">
@@ -147,11 +185,10 @@ export default function Home() {
                                            <span className="text-sm font-semibold leading-6 text-gray-300">/month</span>
                                          </p>
                                                        <Link
-                                                         href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131"
-                                                         target="_blank"
+                                                         href="#download-platforms"
                                                          className="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-blue-200/20 text-blue-200 hover:ring-blue-300/30"
                                                        >
-                                                         Download App
+                                                         Choose Platform
                                                        </Link>
                                          
                                          <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
@@ -175,11 +212,10 @@ export default function Home() {
                                          </p>
                                                    <p className="text-xs text-gray-400 mt-1">Billed $59.99 every 12 months</p>
                                                    <Link
-                                                     href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131"
-                                                     target="_blank"
+                                                     href="#download-platforms"
                                                      className="mt-6 block rounded-md bg-blue-600 py-2 px-3 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                                    >
-                                                     Download App
+                                                     Choose Platform
                                                    </Link>                                         <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
                                             <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> 10 Devices</li>
                                            <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> WireGuard® Protection</li>
@@ -198,11 +234,10 @@ export default function Home() {
                                          </p>
                                                     <p className="text-xs text-gray-400 mt-1">Billed $34.99 every 6 months</p>
                                                     <Link
-                                                      href="https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131"
-                                                      target="_blank"
+                                                      href="#download-platforms"
                                                       className="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-blue-200/20 text-blue-200 hover:ring-blue-300/30"
                                                     >
-                                                      Download App
+                                                      Choose Platform
                                                     </Link>                                         <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
                                            <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> 10 Devices</li>
                                            <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> WireGuard® Protection</li>

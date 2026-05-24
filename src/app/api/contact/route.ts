@@ -52,10 +52,11 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true, message: 'Email sent successfully' });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Failed to send message';
     console.error('Failed to send email:', error);
     return NextResponse.json(
-      { error: error.message || 'Failed to send message' },
+      { error: errorMessage },
       { status: 500 }
     );
   }
