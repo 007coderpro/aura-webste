@@ -102,7 +102,7 @@ test("blog keyword strategy builds a writer brief from the selected target", () 
   assert.equal(brief.heading, "How to Set Up a VPN on iPhone: Simple Guide");
   assert.match(brief.readerProblem, /how to set up vpn on iphone/);
   assert.equal(brief.metadata.slug, "how-to-set-up-vpn-on-iphone");
-  assert.equal(brief.metadata.canonicalUrl, "https://auravpn.com/blog/how-to-set-up-vpn-on-iphone");
+  assert.equal(brief.metadata.canonicalUrl, "https://auravpn.net/blog/how-to-set-up-vpn-on-iphone");
   assert.equal(brief.faqIdeas.length >= 3, true);
   assert.match(brief.faqIdeas[0], /\?$/);
   assert.ok(brief.checklist.some((item) => item.includes("Primary keyword")));

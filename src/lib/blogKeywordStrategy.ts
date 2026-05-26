@@ -394,7 +394,7 @@ export function getBlogKeywordWriterBrief(target: BlogKeywordTarget): BlogKeywor
     ],
     metadata: {
       slug: target.slug,
-      canonicalUrl: `https://auravpn.com/blog/${target.slug}`,
+      canonicalUrl: `https://auravpn.net/blog/${target.slug}`,
       seoTitle: target.seoTitle,
       seoDescription: target.seoDescription,
     },

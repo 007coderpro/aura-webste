@@ -39,7 +39,7 @@ import {
   getBlogKeywordWriterBrief,
   type BlogKeywordTarget,
 } from "@/lib/blogKeywordStrategy";
-import { createSupabaseBrowserClient } from "@/lib/supabase";
+import { createSupabaseBrowserClient, siteUrl } from "@/lib/supabase";
 
 type BlogForm = Omit<BlogPost, "tags" | "faqs" | "published_at"> & {
   tagsText: string;
@@ -346,7 +346,7 @@ export default function AdminBlogDashboard() {
       excerpt: current.excerpt || target.seoDescription,
       seo_title: target.seoTitle,
       seo_description: target.seoDescription,
-      canonical_url: current.canonical_url || `https://auravpn.com/blog/${target.slug}`,
+      canonical_url: current.canonical_url || `${siteUrl}/blog/${target.slug}`,
       focus_keyword: target.primaryKeyword,
       category: target.category,
       tagsText: mergeCommaValues(current.tagsText, target.tags),

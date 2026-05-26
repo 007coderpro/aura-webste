@@ -12,7 +12,7 @@
 - tags: VPN, torrenting, privacy, secure browsing, file sharing
 - seo_title: Best VPN for Torrenting: Safe Setup Guide
 - seo_description: Learn how to choose and set up the best VPN for torrenting with privacy, speed, leak protection, and safer file-sharing habits.
-- canonical_url: https://auravpn.com/blog/best-vpn-for-torrenting-safe-private
+- canonical_url: https://auravpn.net/blog/best-vpn-for-torrenting-safe-private
 - focus_keyword: best VPN for torrenting
 - robots_meta: index,follow
 - og_title: Best VPN for Torrenting: Safe Setup Guide
