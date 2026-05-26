@@ -26,7 +26,7 @@ can save posts, and `viewer` can read the dashboard.
 4. Use `scheduled` with a future publish date for timed publication, or `published` for immediate publication.
 5. Use `draft` to unpublish or `archived` to hide old content.
 6. Use the revision history panel to load a previous version, then save to restore it.
-7. Published and due scheduled posts appear at `/blog/[slug]`, `/blog`, taxonomy pages, and `/sitemap.xml`.
+7. Scheduled posts stay hidden until their publish date. A database cron job promotes due scheduled posts to `published`, and only published posts appear at `/blog/[slug]`, `/blog`, taxonomy pages, and `/sitemap.xml`.
 
 ## SEO Fields
 

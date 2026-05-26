@@ -49,7 +49,7 @@ export async function getPublishedPosts(options: number | BlogPostFilters = 24):
   const { data, error } = await supabase
     .from("web")
     .select(blogSelect)
-    .in("status", ["published", "scheduled"])
+    .eq("status", "published")
     .lte("published_at", new Date().toISOString())
     .order("published_at", { ascending: false })
     .limit(needsLocalFilter ? 1000 : limit);
@@ -73,7 +73,7 @@ export async function getPublishedPostBySlug(slug: string): Promise<BlogPost | n
     .from("web")
     .select(blogSelect)
     .eq("slug", slug)
-    .in("status", ["published", "scheduled"])
+    .eq("status", "published")
     .lte("published_at", new Date().toISOString())
     .maybeSingle();
 
@@ -91,7 +91,7 @@ export async function getPublishedBlogSlugs(): Promise<string[]> {
   const { data, error } = await supabase
     .from("web")
     .select("slug")
-    .in("status", ["published", "scheduled"])
+    .eq("status", "published")
     .lte("published_at", new Date().toISOString());
 
   if (error) {
