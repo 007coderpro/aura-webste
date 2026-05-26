@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Download, Globe, Lock, MousePointerClick, Shield, Smartphone, Zap } from "lucide-react";
+import { getAuraSiteJsonLd } from "@/lib/structuredData";
+import { siteUrl } from "@/lib/supabase";
 
 const platformDownloads = [
   {
@@ -33,8 +35,14 @@ const platformDownloads = [
 ] as const;
 
 export default function Home() {
+  const siteJsonLd = getAuraSiteJsonLd(siteUrl);
+
   return (
     <div className="bg-transparent">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
       {/* Hero Section */}
       <div className="relative isolate px-6 pt-10 lg:px-8">
         <div className="mx-auto max-w-5xl py-12 sm:py-16 lg:py-20 text-center">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BlogAnalytics from "@/components/BlogAnalytics";
 import BlogIndex from "@/components/BlogIndex";
 import { getBlogTaxonomy, getPublishedPosts } from "@/lib/blogData";
+import { getAuraSiteJsonLd } from "@/lib/structuredData";
 import { siteUrl } from "@/lib/supabase";
 
 type BlogPageProps = {
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = await searchParams;
+  const siteJsonLd = getAuraSiteJsonLd(siteUrl);
   const [posts, taxonomy] = await Promise.all([
     getPublishedPosts({
       search: params?.q,
@@ -42,6 +44,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
       <BlogAnalytics slug="blog-index" />
       <BlogIndex
         title="VPN guides built for search and real users."
