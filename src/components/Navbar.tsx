@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center gap-2">
                 <Image 
-                  src="/transparentLogo.png" 
+                  src="/aura-logo-96.png"
                   alt="Aura VPN Logo" 
                   width={40} 
                   height={40} 

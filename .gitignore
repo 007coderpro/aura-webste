@@ -45,4 +45,7 @@ next-env.d.ts
 
 # Local Codex project config and OAuth state
 .codex/
+
+# Local implementation worktrees
+.worktrees/
 .superpowers/

@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <Image 
-              src="/transparentLogo.png" 
+              src="/aura-logo-96.png"
               alt="Aura VPN Logo" 
               width={32} 
               height={32} 

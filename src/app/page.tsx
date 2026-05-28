@@ -48,7 +48,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl py-12 sm:py-16 lg:py-20 text-center">
           <div className="mb-8 flex justify-center">
             <Image
-              src="/transparentLogo.png"
+              src="/aura-logo-160.png"
               alt="Aura VPN"
               width={120}
               height={120}
