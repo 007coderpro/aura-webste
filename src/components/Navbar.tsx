@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import DownloadLink from './DownloadLink';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,18 +37,15 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <Link 
-              href="/#download-platforms"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-500 transition-colors"
+          <div className="ml-auto flex items-center gap-3">
+            <DownloadLink
+              className="inline-flex min-h-11 items-center rounded-lg bg-blue-600 px-4 text-sm font-semibold text-white transition-colors hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:px-5 sm:text-base"
             >
               Download Aura VPN
-            </Link>
-          </div>
-          <div className="-mr-2 flex items-center sm:hidden">
+            </DownloadLink>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="-mr-2 inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:hidden"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
@@ -67,12 +65,6 @@ export default function Navbar() {
             </Link>
             <Link href="/pages/contact" className="border-transparent text-gray-300 hover:bg-white/5 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
               Contact
-            </Link>
-            <Link 
-              href="/#download-platforms"
-              className="border-transparent text-blue-400 hover:bg-white/5 hover:border-blue-400 hover:text-blue-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-            >
-              Download Aura VPN
             </Link>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DownloadLink from "./DownloadLink";
 import { CalendarDays, Clock, Download, Filter } from "lucide-react";
 import type { BlogPost } from "@/lib/blogs";
 import { estimateReadingMinutes, slugifyTitle } from "@/lib/blogs";
@@ -128,14 +129,13 @@ export default function BlogIndex({ title, description, posts, categories, tags,
                 Use the same VPN these guides are written for: fast apps, secure public Wi-Fi, and private browsing.
               </p>
             </div>
-            <Link
-              href="/#download-platforms"
+            <DownloadLink
               data-blog-event="download_click"
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-semibold text-blue-950 hover:bg-blue-50"
             >
               <Download className="h-4 w-4" aria-hidden="true" />
               Download Aura VPN
-            </Link>
+            </DownloadLink>
           </div>
         </section>
 

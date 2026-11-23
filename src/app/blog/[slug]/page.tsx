@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowLeft, CalendarDays, Clock, Download, RefreshCw } from "lucide-react";
 import BlogAnalytics from "@/components/BlogAnalytics";
+import DownloadLink from "@/components/DownloadLink";
 import {
   blogPostToArticleJsonLd,
   estimateReadingMinutes,
@@ -202,14 +203,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <p className="mt-3 text-sm leading-7 text-blue-100">
               Aura VPN helps keep public Wi-Fi, travel browsing, and everyday app traffic private across your devices.
             </p>
-            <Link
-              href="/#download-platforms"
+            <DownloadLink
               data-blog-event={post.cta_type === "signup" ? "signup_start" : "download_click"}
               className="mt-5 inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-semibold text-blue-950 hover:bg-blue-50"
             >
               <Download className="h-4 w-4" aria-hidden="true" />
               {post.cta_type === "signup" ? "Start with Aura VPN" : "Download Aura VPN"}
-            </Link>
+            </DownloadLink>
           </section>
         )}
 
