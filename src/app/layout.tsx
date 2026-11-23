@@ -14,26 +14,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: "Aura VPN - Fast, Secure & Private",
-    template: "%s",
-  },
-  description: "Secure your internet connection with Aura VPN for private browsing, safe Wi-Fi, and fast VPN access.",
-  alternates: {
-    canonical: siteUrl,
-  },
-  openGraph: {
-    title: "Aura VPN - Fast, Secure & Private",
-    description: "Secure your internet connection with Aura VPN for private browsing, safe Wi-Fi, and fast VPN access.",
-    url: siteUrl,
-    siteName: "Aura VPN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Aura VPN - Fast, Secure & Private",
-    description: "Secure your internet connection with Aura VPN.",
-  },
+  title: "Aura VPN",
 };
 
 export default function RootLayout({

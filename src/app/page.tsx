@@ -2,8 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Globe, Lock, MousePointerClick, Shield, Smartphone, Zap } from "lucide-react";
 import DownloadLink from "@/components/DownloadLink";
+import { pageMetadata } from "@/lib/pageMetadata";
 import { getAuraSiteJsonLd } from "@/lib/structuredData";
 import { siteUrl } from "@/lib/supabase";
+
+export const metadata = pageMetadata(
+  "/",
+  "Aura VPN for iPhone, iPad, Mac, and Android",
+  "Download Aura VPN: Fast & Unlimited by VerticalRisers Oy. Encrypt your connection with WireGuard and choose a VPN location on your phone, tablet, or Mac.",
+);
 
 export default function Home() {
   const siteJsonLd = getAuraSiteJsonLd(siteUrl);
@@ -28,10 +35,11 @@ export default function Home() {
             />
           </div>
           <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Secure your digital life with <span className="text-[#ffbd1c]">Aura VPN</span>
+            <span className="text-[#ffbd1c]">Aura VPN</span> for iPhone, iPad, Mac, and Android
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300">
-            Fast, private, and secure access to the internet. Protect your personal data and browse anonymously from anywhere in the world.
+            Encrypt your connection on public Wi-Fi and browse with the VPN server’s IP address.
+            Find Aura VPN: Fast &amp; Unlimited by VerticalRisers Oy on the App Store and Google Play.
           </p>
           <div id="download-platforms" className="mt-8 scroll-mt-24">
             <DownloadLink className="inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-xl bg-blue-600 px-8 py-4 text-xl font-semibold text-white transition-colors hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:px-12">
@@ -39,8 +47,8 @@ export default function Home() {
             </DownloadLink>
           </div>
           <div className="mt-8">
-            <Link href="/pages/contact" className="text-sm font-semibold leading-6 text-gray-400 hover:text-white transition-colors">
-              Need help? Contact Support <span aria-hidden="true">→</span>
+            <Link href="/support" className="text-sm font-semibold leading-6 text-gray-300 hover:text-white transition-colors">
+              Check supported devices and get connection help <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -50,10 +58,7 @@ export default function Home() {
       <div className="py-24 sm:py-32 bg-transparent">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Aura VPN?</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Advanced features for ultimate privacy
-            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">How Aura VPN works</h2>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -63,16 +68,16 @@ export default function Home() {
                   WireGuard® Protocol
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">Experience buffer-free streaming and low-latency gaming with the state-of-the-art WireGuard® protocol.</p>
+                  <p className="flex-auto">Aura VPN uses WireGuard to create an encrypted tunnel between your device and the VPN server you select.</p>
                 </dd>
               </div>
               <div className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <Lock className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  Bank-Grade Encryption
+                  Public Wi-Fi Protection
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">Your data is secured with AES-256 bit encryption, making it unreadable to hackers, ISPs, and snoopers.</p>
+                  <p className="flex-auto">On a café, hotel, or airport network, the tunnel keeps traffic it carries private from others on the same Wi-Fi.</p>
                 </dd>
               </div>
               <div className="flex flex-col">
@@ -81,7 +86,7 @@ export default function Home() {
                   Global Server Network
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">Access content from anywhere in the world. Bypass geo-restrictions and enjoy true internet freedom.</p>
+                  <p className="flex-auto">Choose a location in the app. Websites reached through the VPN see that server’s public IP address. A nearby location can reduce latency.</p>
                 </dd>
               </div>
                <div className="flex flex-col">
@@ -90,7 +95,7 @@ export default function Home() {
                   Strict No-Logs Policy
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">We value your privacy. We never track, store, or share your online activity or personal data.</p>
+                  <p className="flex-auto">Aura VPN does not log browsing activity or DNS queries. Our <Link href="/pages/privacy" className="text-blue-300 underline">privacy policy</Link> explains how purchase and diagnostic data are handled.</p>
                 </dd>
               </div>
                <div className="flex flex-col">
@@ -99,110 +104,33 @@ export default function Home() {
                   No Sign-Up Required
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">Total anonymity from the start. No account, email, or personal details needed to use our VPN.</p>
+                  <p className="flex-auto">Open the app and choose a VPN location without registering an email address.</p>
                 </dd>
               </div>
-                              <div className="flex flex-col">
-                               <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                                 <Smartphone className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                                 Connect 10 Devices
-                               </dt>
-                               <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                                 <p className="flex-auto">One premium account protects all your gadgets. Connect up to 10 devices simultaneously with just one subscription.</p>
-                               </dd>
-                             </div>
-                                       </dl>
-                                     </div>
-                                   </div>
-                                 </div>
-                           
-                                 {/* Pricing Section */}
-                                 <div className="py-24 sm:py-32 bg-transparent">
-                                   <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                     <div className="mx-auto max-w-2xl sm:text-center">
-                                       <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Simple, transparent pricing</h2>
-                                       <p className="mt-6 text-lg leading-8 text-gray-300">
-                                         Choose the plan that suits you best. All plans include full access to our global network and protection for 10 devices.
-                                       </p>
-                                     </div>
-                                     <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-3 lg:gap-x-8">
-                                       
-                                       {/* 1 Month Plan */}
-                                       <div className="relative p-8 bg-white/5 ring-1 ring-white/10 rounded-2xl xl:p-10">
-                                         <h3 className="text-lg font-semibold leading-8 text-white">Monthly</h3>
-                                         <p className="mt-4 text-sm leading-6 text-gray-300">Flexible protection for short-term needs.</p>
-                                         <p className="mt-6 flex items-baseline gap-x-1">
-                                           <span className="text-4xl font-bold tracking-tight text-white">$9.99</span>
-                                           <span className="text-sm font-semibold leading-6 text-gray-300">/month</span>
-                                         </p>
-                                                       <DownloadLink
-                                                         className="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-blue-200/20 text-blue-200 hover:ring-blue-300/30"
-                                                       >
-                                                         Download Aura VPN
-                                                       </DownloadLink>
-                                         
-                                         <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> 10 Devices</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> WireGuard® Protection</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Servers in 10+ Countries</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Total Internet Privacy</li>
-                                         </ul>
-                                       </div>
-                           
-                                       {/* 12 Month Plan (Best Value) */}
-                                       <div className="relative p-8 bg-blue-600/10 ring-2 ring-blue-500 rounded-2xl xl:p-10 lg:z-10 lg:scale-105">
-                                         <div className="absolute top-0 right-0 -mt-3 -mr-3 px-3 py-1 bg-blue-500 rounded-full text-xs font-semibold text-white shadow-sm">
-                                           Best Value
-                                         </div>
-                                         <h3 className="text-lg font-semibold leading-8 text-white">12 Months</h3>
-                                         <p className="mt-4 text-sm leading-6 text-gray-300">Maximum savings for long-term security.</p>
-                                         <p className="mt-6 flex items-baseline gap-x-1">
-                                           <span className="text-4xl font-bold tracking-tight text-white">$4.99</span>
-                                           <span className="text-sm font-semibold leading-6 text-gray-300">/mo</span>
-                                         </p>
-                                                   <p className="text-xs text-gray-400 mt-1">Billed $59.99 every 12 months</p>
-                                                   <DownloadLink
-                                                     className="mt-6 block rounded-md bg-blue-600 py-2 px-3 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                                                   >
-                                                     Download Aura VPN
-                                                   </DownloadLink>
-                                         <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
-                                            <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> 10 Devices</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> WireGuard® Protection</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Servers in 10+ Countries</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Total Internet Privacy</li>
-                                         </ul>
-                                       </div>
-                           
-                                       {/* 6 Month Plan */}
-                                       <div className="relative p-8 bg-white/5 ring-1 ring-white/10 rounded-2xl xl:p-10">
-                                         <h3 className="text-lg font-semibold leading-8 text-white">6 Months</h3>
-                                         <p className="mt-4 text-sm leading-6 text-gray-300">Great balance of price and flexibility.</p>
-                                         <p className="mt-6 flex items-baseline gap-x-1">
-                                           <span className="text-4xl font-bold tracking-tight text-white">$5.83</span>
-                                           <span className="text-sm font-semibold leading-6 text-gray-300">/mo</span>
-                                         </p>
-                                                    <p className="text-xs text-gray-400 mt-1">Billed $34.99 every 6 months</p>
-                                                    <DownloadLink
-                                                      className="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-blue-200/20 text-blue-200 hover:ring-blue-300/30"
-                                                    >
-                                                      Download Aura VPN
-                                                    </DownloadLink>
-                                         <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300">
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> 10 Devices</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> WireGuard® Protection</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Servers in 10+ Countries</li>
-                                           <li className="flex gap-x-3"><Shield className="h-6 w-5 flex-none text-blue-400" /> Total Internet Privacy</li>
-                                                       </ul>
-                                                     </div>
-                                         
-                                                   </div>
-                                                   <p className="mt-10 text-center text-sm text-gray-400">
-                                                     Note: Prices may vary slightly depending on your currency and region. All subscriptions and purchases are securely processed directly within the Aura VPN app.
-                                                   </p>
-                                                 </div>
-                                               </div>
-                                             </div>
-                                           );
-                                         }
-                                         
+              <div className="flex flex-col">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <Smartphone className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  Up to 10 Linked Devices
+                </dt>
+                <dd className="mt-4 text-base leading-7 text-gray-300">
+                  Link up to 10 supported devices to one Premium account. Manage the devices from your profile in the app.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <section className="mx-auto max-w-3xl px-6 pb-24 text-center sm:pb-32">
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Aura VPN Premium</h2>
+        <p className="mt-5 text-lg leading-8 text-gray-300">
+          Aura VPN is free to download. Premium unlocks additional VPN locations and device linking.
+          Open the app to see the plans, billing periods, and prices available in your region before you subscribe.
+        </p>
+        <DownloadLink className="mt-6 inline-flex min-h-12 items-center rounded-xl bg-blue-600 px-6 font-semibold text-white hover:bg-blue-500">
+          Download Aura VPN
+        </DownloadLink>
+      </section>
+    </div>
+  );
+}

@@ -4,8 +4,7 @@ import { getBlogPostUrl } from "@/lib/blogs";
 import { siteUrl } from "@/lib/supabase";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-  const staticRoutes = ["", "/pages/contact", "/pages/privacy", "/pages/terms", "/pages/delete-account", "/blog"];
+  const staticRoutes = ["", "/support", "/pages/contact", "/pages/privacy", "/pages/terms", "/pages/delete-account", "/blog"];
   const [posts, taxonomy] = await Promise.all([getPublishedPosts(1000), getBlogTaxonomy()]);
   const taxonomyRoutes = [
     ...taxonomy.categories.map((item) => `/blog/category/${item.slug}`),
@@ -14,22 +13,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
   const routes: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: now,
     changeFrequency: route === "/blog" || route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : route === "/blog" ? 0.8 : 0.5,
   }));
 
   return [
     ...routes,
-    ...posts.map((post) => ({
+    ...posts.filter((post) => post.robots_meta !== "noindex,nofollow").map((post) => ({
       url: getBlogPostUrl(post, siteUrl),
-      lastModified: post.updated_at ? new Date(post.updated_at) : now,
+      lastModified: post.updated_at ?? post.published_at ?? undefined,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
     ...taxonomyRoutes.map((route) => ({
       url: `${siteUrl}${route}`,
-      lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),

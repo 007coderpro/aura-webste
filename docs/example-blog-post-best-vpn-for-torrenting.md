@@ -61,7 +61,7 @@ Before choosing a VPN for torrenting, look for these practical features.
 
 ### Strong encryption
 
-Encryption helps make your traffic unreadable to local network observers. Aura VPN describes its protection as AES-256 bit encryption, which is designed to help keep data private from snoopers, hackers, and other unwanted observers.
+Encryption helps make your traffic unreadable to local network observers. Aura VPN uses WireGuard to encrypt traffic between your device and the VPN server.
 
 ### No-logs policy
 

@@ -18,7 +18,10 @@ test("site structured data graph describes Aura VPN entities", async () => {
   assert.equal(schema["@context"], "https://schema.org");
   assert.equal(findType("Organization")?.url, "https://auravpn.net");
   assert.equal(findType("WebSite")?.publisher["@id"], "https://auravpn.net/#organization");
-  assert.deepEqual(findType("SoftwareApplication")?.operatingSystem, ["macOS", "iOS", "Android"]);
+  const app = findType("SoftwareApplication");
+  assert.deepEqual(app?.operatingSystem, ["macOS", "iOS", "iPadOS", "Android"]);
+  assert.equal(app.publisher.name, "VerticalRisers Oy");
+  assert.equal(app.softwareHelp["@id"], "https://auravpn.net/support#webpage");
 });
 
 test("homepage and blog index inject shared site JSON-LD", () => {

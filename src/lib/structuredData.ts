@@ -1,6 +1,5 @@
 const appStoreUrls = [
-  "https://apps.apple.com/fi/app/aura-vpn-fast-unlimited/id6745866131",
-  "https://apps.apple.com/us/app/aura-vpn-fast-unlimited/id6745866131",
+  "https://apps.apple.com/app/id6745866131",
   "https://play.google.com/store/apps/details?id=com.auravpn",
 ];
 
@@ -26,6 +25,11 @@ export function getAuraSiteJsonLd(baseUrl: string) {
           "@type": "ImageObject",
           url: `${rootUrl}/aura_logo.png`,
         },
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer support",
+          url: `${rootUrl}/pages/contact`,
+        },
       },
       {
         "@type": "WebSite",
@@ -41,20 +45,18 @@ export function getAuraSiteJsonLd(baseUrl: string) {
         "@type": "SoftwareApplication",
         "@id": softwareApplicationId,
         name: "Aura VPN",
+        alternateName: "Aura VPN: Fast & Unlimited",
         url: rootUrl,
         description:
-          "Aura VPN is a private, secure VPN app for safer browsing on macOS, iOS, and Android.",
+          "Aura VPN uses WireGuard to encrypt the connection between your device and a VPN server.",
         applicationCategory: "SecurityApplication",
-        operatingSystem: ["macOS", "iOS", "Android"],
+        operatingSystem: ["macOS", "iOS", "iPadOS", "Android"],
         downloadUrl: appStoreUrls,
         publisher: {
-          "@id": organizationId,
+          "@type": "Organization",
+          name: "VerticalRisers Oy",
         },
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-        },
+        softwareHelp: { "@id": `${rootUrl}/support#webpage` },
       },
     ],
   };

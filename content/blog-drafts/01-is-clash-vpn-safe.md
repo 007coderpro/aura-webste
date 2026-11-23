@@ -29,7 +29,7 @@
 Is Clash VPN free? | Clash VPN is generally listed as a free app in mobile app stores, though specific feature tiers and limits can change over time. Free VPNs often come with trade-offs like ads, slower speeds, or unclear data practices, so verify the current terms before installing.
 Is Clash VPN safe to use? | Publicly available information about Clash VPN is limited and there is no widely cited independent security audit. If you cannot confirm the developer, jurisdiction, encryption standards, and logging policy, it is reasonable to choose a VPN with more transparent documentation.
 Where is Clash VPN based? | The operating company and legal jurisdiction behind Clash VPN are not consistently documented across public sources. Jurisdiction matters for privacy, so prefer providers that clearly state where they are incorporated and which laws apply.
-What are the best Clash VPN alternatives? | Aura VPN is a strong alternative for users who want straightforward apps, AES-256 encryption, and a clear no-logs policy. Established names like Proton VPN and Mullvad are also reasonable choices if you prefer a larger, well-known brand.
+What are the best Clash VPN alternatives? | Aura VPN offers WireGuard encryption and apps for iPhone, iPad, Mac, and Android. Established names like Proton VPN and Mullvad are also reasonable choices if you prefer a larger, well-known brand.
 How do I uninstall Clash VPN and switch? | Disconnect any active VPN session, remove the app from your device through normal uninstall steps, revoke any VPN configuration profile in your system settings, and then install your new VPN from an official app store.
 
 ## Article Body
@@ -119,7 +119,7 @@ If you are searching for clash vpn alternatives, you have several reasonable pat
 
 Aura VPN is designed for fast, private, secure internet access without unnecessary complexity. The product is built around a small set of clearly stated commitments:
 
-- AES-256 encryption for traffic between your device and the VPN.
+- WireGuard encryption between your device and the VPN server.
 - A no-logs policy that does not track, store, or share online activity or personal data.
 - Native apps for macOS, iOS, iPadOS, and Android, distributed through the official Apple App Store and Google Play.
 - A clean interface that focuses on connecting quickly and staying out of the way.

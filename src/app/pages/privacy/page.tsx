@@ -1,4 +1,11 @@
 import Link from 'next/link';
+import { pageMetadata } from '@/lib/pageMetadata';
+
+export const metadata = pageMetadata(
+  '/pages/privacy',
+  'Aura VPN Privacy Policy',
+  'Read how Aura VPN handles browsing activity, subscriptions, diagnostics, and advertising data.',
+);
 
 export default function PrivacyPage() {
   return (

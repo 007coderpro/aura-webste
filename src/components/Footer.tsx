@@ -24,6 +24,9 @@ export default function Footer() {
             <span className="font-bold text-lg text-[#ffbd1c]">Aura VPN</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
+            <Link href="/support" className="text-gray-400 hover:text-white text-sm">
+              Help Center
+            </Link>
             <Link href="/pages/terms" className="text-gray-400 hover:text-white text-sm">
               Terms of Service
             </Link>

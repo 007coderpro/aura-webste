@@ -53,7 +53,7 @@ The fourth is general parental peace of mind. Roblox already has account privacy
 
 ## Does Roblox work with a VPN?
 
-The short, honest answer is usually yes. Roblox can load, sign in, and play with a VPN running on the same device. Aura VPN uses AES-256 encryption and is designed for fast, private, secure internet access, which is the kind of profile that tends to work well for gaming.
+The short, honest answer is usually yes. Roblox can load, sign in, and play with a VPN running on the same device. Aura VPN uses WireGuard. Try a nearby VPN location and compare your in-game latency on the same network.
 
 That said, Roblox is a large platform with many systems behind it. Some servers, experiences, or anti-abuse features may behave differently when traffic is routed through a VPN. You might see a slower matchmaking step, occasional reconnect prompts, or a server that prefers you connect from a different region. None of this is unusual for online games over a VPN.
 
@@ -145,6 +145,6 @@ These habits give you the privacy benefits of a Roblox VPN without putting an ac
 
 A VPN for Roblox is not about doing anything Roblox does not want. It is about adding a privacy and safety layer to a game that millions of kids and adults play every day. Used for legitimate reasons — public Wi-Fi, travel, reduced IP exposure, family privacy — a Roblox VPN is one of the easiest upgrades you can make to a normal play setup.
 
-Aura VPN is built around fast, private, secure internet access. It uses AES-256 encryption, follows a no-logs policy, and is distributed through official app stores for macOS, iOS, iPadOS, and Android. If that fits what you want for your family's Roblox time, [download Aura VPN](/#download-platforms), connect to a nearby server, and launch Roblox the same way you always do.
+Aura VPN is built around fast, private, secure internet access. It uses WireGuard, follows a no-logs policy, and is distributed through official app stores for macOS, iOS, iPadOS, and Android. If that fits what you want for your family's Roblox time, [download Aura VPN](/#download-platforms), connect to a nearby server, and launch Roblox the same way you always do.
 
 If you are also interested in safer privacy habits beyond gaming, our guide to the [best VPN for torrenting](/blog/best-vpn-for-torrenting-safe-private) covers a related setup for general file sharing. Either way, the principle is the same: use a VPN to protect your connection, follow the platform's rules, and keep your routine simple enough that you actually stick with it.

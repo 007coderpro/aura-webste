@@ -1,4 +1,11 @@
 import Link from 'next/link';
+import { pageMetadata } from '@/lib/pageMetadata';
+
+export const metadata = pageMetadata(
+  '/pages/terms',
+  'Aura VPN Terms of Service',
+  'Read the Aura VPN end user license agreement, including subscription terms, renewals, and refunds.',
+);
 
 export default function TermsPage() {
   return (

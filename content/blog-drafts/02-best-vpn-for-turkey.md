@@ -79,7 +79,7 @@ A VPN for Turkey should be judged on the same fundamentals that matter anywhere,
 
 ### Strong encryption
 
-Encryption is the foundation. Aura VPN uses AES-256 bit encryption, which is designed to keep your traffic unreadable to local network observers, including people sharing hotel or cafe Wi-Fi with you.
+Encryption is the foundation. Aura VPN uses WireGuard to encrypt traffic between your device and the VPN server, including when you connect over hotel or cafe Wi-Fi.
 
 ### A clear no-logs policy
 
@@ -97,7 +97,7 @@ When you are physically in Turkey, choosing a nearby European server such as Fra
 
 Aura VPN is designed around fast, private, secure internet access without unnecessary complexity. For a Turkey VPN setup, the relevant points are straightforward.
 
-Aura VPN uses AES-256 encryption, follows a clear no-logs policy that does not track, store, or share online activity or personal data, and ships native apps for macOS, iOS, iPadOS, and Android through official app stores. That combination matters in Turkey because you want an app that installs cleanly, connects reliably, and does not require you to dig through manual configurations on a hotel network.
+Aura VPN uses WireGuard, has a policy against logging browsing activity, and ships native apps for macOS, iOS, iPadOS, and Android through official app stores. That combination matters in Turkey because you want an app that installs cleanly, connects reliably, and does not require you to dig through manual configurations on a hotel network.
 
 When you are in Turkey, a practical starting point is to open the Aura VPN app and connect to a nearby European server location. Frankfurt and Amsterdam are common picks because they tend to be close, well-connected, and stable. If your first choice is slow, try another nearby city.
 
@@ -151,7 +151,7 @@ If you tried these steps and still have trouble, reach out to support through th
 
 ## Final recommendation and download
 
-The best VPN for Turkey is the one that combines strong encryption, a clear no-logs policy, official apps, and a simple workflow you will actually use every day. Aura VPN is built around exactly that: AES-256 encryption, a no-logs policy that does not track, store, or share your activity, and native apps for macOS, iOS, iPadOS, and Android.
+The best VPN for Turkey is the one that combines strong encryption, a clear no-logs policy, official apps, and a simple workflow you will actually use every day. Aura VPN offers WireGuard encryption, a policy against logging browsing activity, and native apps for macOS, iOS, iPadOS, and Android.
 
 Install the app before you travel, connect to a nearby European server when you arrive, and keep the connection on for sensitive browsing, banking, and public Wi-Fi sessions. Treat your Turkey VPN as a quiet, dependable layer of privacy rather than a workaround.
 
