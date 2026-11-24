@@ -13,7 +13,7 @@ export default function TermsPage() {
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-300">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">End User License Agreement (EULA)</h1>
         <p className="mt-6 text-xl leading-8 font-semibold text-white">
-          Last Updated: August 23, 2025
+          Effective November 24, 2026
         </p>
         
         <div className="mt-10 space-y-8">
@@ -25,14 +25,14 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Privacy</h2>
             <p>
-              We value your privacy and take reasonable measures to protect it. Our Services collect minimal user data as detailed in our Privacy Policy, including no logging of browsing activity, DNS queries, or traffic content for VPN functionality, and limited non-VPN data shared with third parties such as RevenueCat for purchases, Firebase for analytics, and Google AdMob for ads. Please review our Privacy Policy available on <Link href="https://auravpn.net" className="text-blue-400 hover:text-blue-300">auravpn.net</Link> to understand how we collect, use, retain, and share your information, including consent-based data use and retention policies aligned with both iOS and Android platforms.
+              We do not log your browsing activity, DNS queries, or VPN traffic content. We use RevenueCat to manage purchases and Firebase for optional analytics. Our <Link href="/pages/privacy" className="text-blue-400 hover:text-blue-300">Privacy Policy</Link> explains what we collect, how we use and share it, and what choices you have.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Data Privacy and GDPR Compliance</h2>
             <p>
-              AuraVPN complies with the General Data Protection Regulation (GDPR) and applicable data privacy laws. All personal data provided by you is stored securely in our database systems and, where necessary, shared with Google’s and Apple’s services, as well as other processors like RevenueCat, Firebase, and AdMob, to support our platform’s functionality as described in our Privacy Policy. If you wish to have your account details and associated personal data deleted, please contact us at <Link href="mailto:contact@auravpn.net" className="text-blue-400 hover:text-blue-300">contact@auravpn.net</Link>. Please note that certain data may be retained as required by law or for legitimate business purposes, and data with third parties is retained per their policies (e.g., up to 14 months for Firebase event-level data).
+              AuraVPN complies with the General Data Protection Regulation (GDPR) and applicable data privacy laws. We store the personal data you provide securely. Our Privacy Policy explains when we share data with Apple, Google, and other providers. If you wish to have your account details and associated personal data deleted, please contact us at <Link href="mailto:contact@auravpn.net" className="text-blue-400 hover:text-blue-300">contact@auravpn.net</Link>. Please note that certain data may be retained as required by law or for legitimate business purposes, and data with third parties is retained per their policies (e.g., up to 14 months for Firebase event-level data).
             </p>
           </section>
 
@@ -103,9 +103,9 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">Ads and Information Sharing</h2>
+            <h2 id="ads-and-information-sharing" className="text-2xl font-bold text-white mb-4 scroll-mt-24">Ads and Information Sharing</h2>
             <p>
-              Our Services may display advertisements provided by third-party ad networks, such as Google AdMob. By using the Services, you acknowledge and agree that advertisements may be shown to you and that AuraVPN may share certain information with these ad networks for the purpose of delivering relevant ads. Such information may include, but is not limited to, device identifiers, usage data, and other information as described in our Privacy Policy. You agree that AuraVPN is not liable for any issues arising from the display of such advertisements or from information shared with ad networks.
+              Aura shows no ads in the app. On iOS, you can choose whether to help us measure which ads led you to Aura. You make that choice through Apple’s tracking prompt. Accepting these Terms alone does not turn on campaign measurement. See our <Link href="/pages/privacy#how-people-find-aura" className="text-blue-400 hover:text-blue-300">Privacy Policy</Link> for details.
             </p>
           </section>
 

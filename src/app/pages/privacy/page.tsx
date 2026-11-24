@@ -4,7 +4,7 @@ import { pageMetadata } from '@/lib/pageMetadata';
 export const metadata = pageMetadata(
   '/pages/privacy',
   'Aura VPN Privacy Policy',
-  'Read how Aura VPN handles browsing activity, subscriptions, diagnostics, and advertising data.',
+  'Read how Aura VPN handles browsing activity, subscriptions, diagnostics, and optional campaign measurement on iOS.',
 );
 
 export default function PrivacyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-300">
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">AuraVPN Privacy Policy</h1>
         <p className="mt-6 text-xl leading-8 font-semibold text-white">
-          Last Updated: August 23, 2025
+          Effective November 24, 2026
         </p>
         
         <div className="mt-10 space-y-8">
@@ -43,17 +43,14 @@ export default function PrivacyPage() {
                     <strong className="text-white">Internally (No Third Parties):</strong> Account ID (app user ID for purchase linking) and purchase status (e.g., active/inactive subscription).
                   </li>
                   <li>
-                    <strong className="text-white">RevenueCat (Purchases):</strong> Device type/OS, last-seen timestamp, purchase receipts/tokens (e.g., from Apple or Google), app user ID (for integration).
+                    <strong className="text-white">RevenueCat (Purchases):</strong> To manage purchases, RevenueCat uses your device type, operating system, app user ID, and the time your device was last seen. It also uses purchase receipts or tokens from Apple or Google.
                   </li>
                   <li>
                     <strong className="text-white">Firebase Analytics (Basic, Opt-In):</strong> Device model/OS/app version, session duration, anonymized IP (coarse country), installation ID, crashes, performance metrics.
                   </li>
-                  <li>
-                    <strong className="text-white">Google AdMob (Ads):</strong> IP address (coarse location), device ID (e.g., IDFA on iOS if enabled via ATT prompt, or Advertising ID on Android if consented), advertising data (ads viewed), user interactions (e.g., app events, video views for ad optimization).
-                  </li>
                 </ul>
                 <p className="mt-4">
-                  No emails, names, precise locations, or personal identifiers are collected.
+                  We do not collect your email address, name, or precise location in the app. For data used in optional campaign measurement on iOS, see <a href="#how-people-find-aura" className="text-blue-400 hover:text-blue-300">How people find Aura</a>.
                 </p>
               </div>
 
@@ -73,13 +70,10 @@ export default function PrivacyPage() {
                 <strong className="text-white">Internal:</strong> Manage subscriptions (link account ID to purchase status for entitlement checks).
               </li>
               <li>
-                <strong className="text-white">RevenueCat:</strong> Subscription validation/entitlements (e.g., unlock features via receipts), fraud prevention. Tied to platform billing (Apple or Google); no marketing.
+                <strong className="text-white">RevenueCat (Purchases):</strong> RevenueCat verifies purchases through Apple or Google, unlocks subscription features, and helps prevent fraud. This works regardless of your tracking choice on iOS.
               </li>
               <li>
                 <strong className="text-white">Firebase:</strong> App improvement (e.g., optimize UI/performance via sessions/metrics), debugging (crashes/responses), aggregate insights (e.g., regional engagement). Aggregated only; no profiling.
-              </li>
-              <li>
-                <strong className="text-white">AdMob:</strong> Display ads (e.g., serve relevant banners/interstitials based on interactions/IP), improve ad performance (e.g., measure views/clicks). No use beyond monetization.
               </li>
             </ul>
             <p>
@@ -88,9 +82,22 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-white mb-4">Data Retention</h2>
+            <h2 id="how-people-find-aura" className="text-2xl font-bold text-white mb-4 scroll-mt-24">How people find Aura</h2>
+            <p className="mb-4">
+              Aura shows no ads in the app. If you allow tracking on iOS, AudienceLab uses device identifiers, device settings, and app activity. This helps us understand which ads led people to install Aura. With the same permission, we share a device identifier with RevenueCat to connect those installs with subscriptions.
+            </p>
             <p>
-              Data use is consent-based (e.g., ATT for IDFA on iOS; opt-in for Advertising ID on Android; opt-in prompt for analytics/ads; revocable in settings) and retained in accordance with the respective service providers&apos; policies (e.g., Firebase Analytics event-level data is typically retained for 2 months by default or up to 14 months depending on configuration, with user-level data up to 26 months for Google signals but respecting shorter periods; aggregated data may be kept longer; RevenueCat data is retained as necessary for legal obligations, typically up to 6 years or until deletion request; AdMob user activity data is retained for up to 90 days, while ads activity data may be retained for up to 7 years). Note that Firebase, RevenueCat, and AdMob data is not automatically deleted when the app is uninstalled or upon other events like account logout—existing collected data persists on the providers&apos; servers until the retention period expires or explicit deletion is requested, as no custom automatic deletion mechanisms (e.g., TTL policies or scheduled purges) have been configured beyond the providers&apos; defaults. Data can be deleted upon user request via support (e.g., we can process deletions for RevenueCat via dashboard/API; for Firebase/AdMob, we facilitate requests to Google where possible, though some anonymized/aggregated data may remain).
+              You can use the VPN either way. To change your choice on your iPhone, go to Settings → Privacy &amp; Security → Tracking.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">Data Retention</h2>
+            <p className="mb-4">
+              Each provider follows its own retention policy. Firebase Analytics typically keeps event data for 2 months by default, or up to 14 months depending on the settings. Google signals data may be kept for up to 26 months if shorter limits do not apply. Aggregated data may be kept longer. RevenueCat keeps purchase records as needed to meet legal obligations, typically for up to 6 years or until you request deletion.
+            </p>
+            <p>
+              Signing out or uninstalling Aura does not delete records already held by our providers. You can contact us to request deletion. We can process requests for RevenueCat and help you submit requests to Google. Some anonymous or aggregated data may remain.
             </p>
           </section>
 
@@ -104,14 +111,17 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Information Sharing</h2>
             <p className="mb-4">
-              We do not sell, rent, or trade your personal information. No selling or disclosure beyond what&apos;s necessary, in compliance with platform guidelines (e.g., Apple Guideline 5.4 and Google Play Data Safety). Shared only with processors:
+              We do not sell, rent, or trade your personal information. We share data with the following providers.
             </p>
             <ul className="list-disc pl-5 space-y-2 mb-4">
               <li>
-                <strong className="text-white">RevenueCat:</strong> For purchase validation; stored in US (AWS, encrypted, per DPA).
+                <strong className="text-white">RevenueCat</strong> uses purchase data to verify subscriptions. It stores that data encrypted in the US on AWS.
               </li>
               <li>
-                <strong className="text-white">Google (Firebase/AdMob):</strong> For analytics/ad serving; stored in US (encrypted, per Data Processing Terms). AdMob shares with advertisers for bidding/targeting.
+                <strong className="text-white">Google Firebase</strong> handles optional app analytics. It stores analytics data encrypted in the US.
+              </li>
+              <li>
+                <strong className="text-white">AudienceLab and RevenueCat</strong> receive campaign measurement data only if you allow tracking on iOS. See <a href="#how-people-find-aura" className="text-blue-400 hover:text-blue-300">How people find Aura</a> for what each receives.
               </li>
             </ul>
             <p>
